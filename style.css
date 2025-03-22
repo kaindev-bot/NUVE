@@ -143,7 +143,7 @@ header h1{
     border-image: linear-gradient(170deg, transparent 50%, var(--color-00) )1;
 }
 
-.home-img, .about-img img {
+.home-img, .about-img {
     max-width: 100%;
 }
 
