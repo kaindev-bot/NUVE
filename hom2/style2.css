@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: 'Poppins' , sans-serif;
+    font-size: 16px;
+}
+   
+
+body {
+    background-color: #474305;
+    color: #ffffff;
+}
+body{
+    background-color: #474305;
+}
+
+header { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #000;
+}
+
+header h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000;
+}
+
+
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 0 2vw;
+}
+.gallery-items{
+    width: 340px;
+    height: 340px;
+    border: 10px solid #ccd02d;
+    box-shadow: 5px 5px 5px #0006;
+    flex-grow: 1;
+    transition: transform 0.5s linear;
+}
+.gallery-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-items:hover{
+    transform: scale(1.1);
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: default;
+}
+
+.services-container .services-box:hover { 
+    border-color: #000000;
+    transform: scale(1.01);
+}
+
+.services-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.services-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 25rem;
+    margin-bottom: 1rem;
+}
+
+.services-container .services-box {
+    padding: 2rem 1rem 2.5rem;
+    border-radius: 1rem;
+    text-align: left;
+    border: solid 0.15rem #000000;
+    background-color: #000000;
+    transition: 0.5s ease;
+}
+
+.services-container .services-box:hover { 
+    border-color: #000000;
+    transform: scale(1.01);
+}
+
+.services-box i {
+    font-size: 4.3rem;
+    color: #424000;
+}
+
+.services-box h3 {
+    font-size: 1.5rem;
+}
+
+.services-box p {
+    margin: 0.5rem; 
+    letter-spacing: 0.1rem;
+    /* N lines ...*/
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.home, .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-img {
+    border-left: solid 0.0rem var(--color-00);
+    border-bottom: solid 0.0rem var(--color-00);
+    border-image: linear-gradient(170deg, transparent 50%, var(--color-00) )1;
+}
+
+.home-img, .about-img img {
+    max-width: 100%;
+}
+
+.about{
+    background-color: #030300;
+}
+
+.home-content, .about-content {
+    width: 45%;
+}
+
+.home-content h1, .about-content h1{
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content h3, .about-content h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.home-content p, .about-content p {
+    margin-top: 1.2rem;
+    text-align: justify;
+}
+
+/* ===== button ===== */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    background-color: #ffd900;
+    border-radius: 2rem;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease;
+    margin-top: 1.2rem;
+ }
+ 
+ .btn:hover {
+     box-shadow: 0 0 0.3rem #000;
+     background-color: #ffffff;
+     color: #000000;
+     cursor: pointer;
+ }
+ /* ===== /button ===== */
+
+ footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: #000000;
+}
+
+/* Extra Small (xs): Smartphone (portrait) */
+@media (min-width: 0px) {
+    .menu-hamburguer{
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav-responsive  a {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+    
+    section {
+        padding: 6rem 2.5rem;
+    }
+
+    .home, .about {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .home-img, .about-img {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .home-content, .about-content {
+        width: 100%;
+    }
+
+    .home-content div {
+        text-align: center;
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    
+    .services-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-box {
+    width: 100%;
+    }
+
+    .services-box {
+    width: 60%;
+    margin-bottom: 2rem;
+   }
+
+  .services-container2{
+    flex-direction: column;
+    align-items: center;
+    }
+
+  .services-box2 {
+    width: 100%;
+   }
+
+  .services-box2 {
+   width: 60%;
+   margin-bottom: 2rem;
+  }  
+
+header{
+    background-color: #000000;
+}
+
+}
+/* Extra Small (xs): Smartphone (portrait) */
+@media (min-width: 0px) {
+    .menu-hamburguer{
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav-responsive  a {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+    
+    section {
+        padding: 6rem 2.5rem;
+    }
+
+    .home, .about {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .home-img, .about-img {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .home-content, .about-content {
+        width: 100%;
+    }
+
+    .home-content div {
+        text-align: center;
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    
+    .services-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-box {
+    width: 100%;
+    }
+
+    .services-box {
+    width: 60%;
+    margin-bottom: 2rem;
+   }
+
+  .services-container2{
+    flex-direction: column;
+    align-items: center;
+    }
+
+  .services-box2 {
+    width: 100%;
+   }
+
+  .services-box2 {
+   width: 60%;
+   margin-bottom: 2rem;
+  }  
+
+header{
+    background-color: #000000;
+}
+}
+
+/* Small (sn): Smartphone (landscape) */
+@media (max-width: 567px) {
+    .home-img, .about-img{
+        width: 0%;
+        max-width: 70%;
+    }
+    
+    .services-box{
+        width: 40%;
+    }
+
+    .services-box2{
+        width: 40%;
+    }
+
+}
+/* Medium (md): Tablet */
+
+@media (min-width: 768px) {
+.menu-hamburguer{
+    display: none;
+}
+
+.nav {
+    display: block;
+}
+
+.nav-responsive, .nav-responsive a {
+    display: none;
+}
+
+.home, .about{
+    flex-direction: row;
+    justify-content: left;
+}
+.home-img, .about-img {
+    max-width: 45%;
+}
+
+.home-content, .about-content{
+    width: 50%;
+}
+
+.services-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-box{
+    width: 60%;
+    margin-bottom: 2rem;
+}
+
+  .services-container2 {
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-box2{
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+
+.portfolio-container {
+    grid-template-columns: auto auto;   
+  }
+
+  form .input-box input {
+    width: 49%;
+  }
+}
+
+/* larg (lg): Notebook */
+
+@media (min-width: 992px) {
+
+    /*.home-img, .about-img {
+        max-width: 35%;
+    }*/
+
+    .services-container{
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+
+    .services-container2{
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+}
+
+/* Extra large (x1): Desktop */
+
+@media (min-width: 1200px) {
+
+    .home-img, .about-img {
+        max-width: 25%;
+    }
+    
+    .home-content h1 {
+        font-size: 2.7rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: auto auto auto;   
+    }
+}
+
+/*==== /media queries ====*/
