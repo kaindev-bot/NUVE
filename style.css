@@ -607,7 +607,7 @@ footer {
 *::before,
 *::after {
   box-sizing: border-box;
-  display:inline-block;
+  display: inline-block;
 }
 
 * {
