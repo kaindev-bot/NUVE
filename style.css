@@ -395,9 +395,6 @@ footer {
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-* {
   margin: 0;
 }
 
@@ -608,9 +605,6 @@ footer {
 *::after {
   box-sizing: border-box;
   display: inline-block;
-}
-
-* {
   margin: 0;
 }
 
