@@ -1,0 +1,83 @@
+/* =====================================================
+   RODAPÉ
+   Colunas, logo grande e barra de direitos.
+   ===================================================== */
+footer {
+  background: var(--rodape-fundo);
+  color: var(--rodape-texto);
+  padding: 72px 0 0;
+  font-size: 0.98rem;
+  position: relative;
+  overflow: hidden;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--azul-claro),
+    transparent
+  );
+  opacity: 0.6;
+}
+.fg {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+footer .brand {
+  margin-bottom: 16px;
+}
+.fg p {
+  margin: 0 0 20px;
+  max-width: 22em;
+}
+footer h4 {
+  font: 500 0.9rem var(--fonte-titulo);
+  color: var(--branco);
+  margin: 0 0 14px;
+}
+.fg a:not(.brand):not(.btn) {
+  display: block;
+  color: var(--rodape-texto);
+  text-decoration: none;
+  padding: 4px 0;
+}
+.fg a:not(.brand):not(.btn):hover {
+  color: var(--branco);
+  text-decoration: underline;
+}
+.fg span {
+  display: block;
+  padding: 4px 0;
+}
+footer .btn {
+  padding: 11px 18px;
+  font-size: 0.95rem;
+}
+.fbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--rodape-linha);
+  margin-top: 56px;
+  padding: 22px 0;
+  font-size: 0.9rem;
+}
+.fbar a {
+  color: var(--rodape-texto);
+}
+@media (max-width: 860px) {
+  .fg {
+    grid-template-columns: 1fr 1fr;
+  }
+  .fb {
+    grid-column: 1/-1;
+  }
+}

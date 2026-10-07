@@ -1,0 +1,35 @@
+/* =====================================================
+   FAIXA DE SERVIÇOS
+   Faixa azul-clara que rola logo abaixo do topo.
+   ===================================================== */
+.strip {
+  background: var(--azul-claro);
+  color: var(--azul-profundo);
+  overflow: hidden;
+  white-space: nowrap;
+  font: 800 0.95rem var(--fonte-titulo);
+  padding: 16px 0;
+}
+.strip div {
+  display: inline-block;
+  animation: mq 30s linear infinite;
+  padding-left: 100%;
+}
+.strip i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--marinho);
+  margin: 0 28px;
+}
+@keyframes mq {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .strip div {
+    animation: none;
+    padding-left: 0;
+  }
+}

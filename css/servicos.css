@@ -1,0 +1,50 @@
+/* =====================================================
+   SERVIÇOS
+   Grade de cards (o primeiro é o destaque).
+   ===================================================== */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.card {
+  grid-column: span 2;
+  background: var(--cartao);
+  border: 1px solid var(--linha);
+  border-top: 3px solid var(--azul-claro);
+  border-radius: 4px;
+  padding: 30px 30px 34px;
+}
+.card.w4 {
+  grid-column: span 4;
+}
+.card.w3 {
+  grid-column: span 3;
+}
+.card.hl {
+  background: var(--marinho);
+  color: var(--branco);
+  border-color: var(--marinho);
+  border-top-color: var(--azul-claro);
+}
+.card.hl p {
+  color: var(--destaque-texto);
+}
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.card p {
+  margin: 0;
+  color: var(--texto-suave);
+  max-width: 34em;
+}
+@media (max-width: 860px) {
+  .card,
+  .card.w4,
+  .card.w3 {
+    grid-column: span 6;
+  }
+}

@@ -1,0 +1,35 @@
+/* =====================================================
+   BOTÃO FLUTUANTE DO WHATSAPP
+   Aparece só no celular, no canto de baixo da tela.
+   ===================================================== */
+.zap {
+  display: none;
+}
+header.open ~ .zap {
+  display: none !important; /* some quando o menu está aberto */
+}
+@media (max-width: 860px) {
+  .zap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: fixed;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    z-index: 4;
+    background: var(--azul-claro);
+    color: var(--azul-profundo);
+    font: 600 0.95rem var(--fonte-texto);
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 2px;
+    box-shadow: 0 6px 20px var(--sombra-botao);
+  }
+  .zap svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+  }
+}

@@ -1,0 +1,51 @@
+/* =====================================================
+   PROCESSO
+   Etapas em escada.
+   ===================================================== */
+.alt {
+  background: var(--fundo-2);
+}
+.steps {
+  list-style: none;
+  margin: 56px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.steps li {
+  border-top: 4px solid var(--azul-claro);
+  padding: 18px 18px 0 0;
+}
+.steps li:nth-child(2) {
+  margin-top: 36px;
+}
+.steps li:nth-child(3) {
+  margin-top: 72px;
+}
+.steps li:nth-child(4) {
+  margin-top: 108px;
+}
+.steps b {
+  display: block;
+  font: 500 1.05rem var(--fonte-titulo);
+  margin: 6px 0;
+}
+.steps em {
+  font: 800 2.4rem var(--fonte-titulo);
+  color: var(--azul-claro);
+  font-style: normal;
+}
+.steps span {
+  color: var(--texto-suave);
+  font-size: 0.98rem;
+}
+@media (max-width: 860px) {
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  .steps li:nth-child(n) {
+    margin-top: 0;
+  }
+}

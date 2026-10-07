@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Projetos | Nuve Studios</title>
+    <meta
+      name="description"
+      content="Projetos da Nuve Studios, estúdio visual de Aracaju: posts, pós-produção e direção de arte."
+    />
+    <meta name="theme-color" content="#0d2037" />
+    <!-- Sem projetos a página fica oculta do Google. Quando adicionar os primeiros,
+         troque "noindex" por "index, follow". -->
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="https://SEU-DOMINIO/projetos.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Nuve Studios" />
+    <meta property="og:title" content="Projetos | Nuve Studios" />
+    <meta
+      property="og:description"
+      content="Posts, pós-produção e direção de arte feitos pela Nuve."
+    />
+    <meta property="og:url" content="https://SEU-DOMINIO/projetos.html" />
+    <meta
+      property="og:image"
+      content="https://SEU-DOMINIO/assets/preview-link.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/nuvem-icone.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="assets/icone-512.png"
+      type="image/png"
+      sizes="512x512"
+    />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/cores.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/rodape.css" />
+    <link rel="stylesheet" href="css/whatsapp.css" />
+    <link rel="stylesheet" href="css/projetos.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="m" viewBox="249 141 340 176">
+        <path
+          fill="currentColor"
+          fill-rule="nonzero"
+          d="M 570.949219 298.539062 L 570.96875 238.011719 L 455.148438 238.011719 L 455.085938 254.980469 L 485.8125 254.976562 L 485.808594 273.128906 L 437.316406 273.136719 L 437.414062 220.347656 L 479.628906 220.351562 L 479.617188 159.152344 L 315.355469 159.148438 L 315.351562 202.648438 L 378.0625 202.640625 L 378.085938 255.640625 L 329.484375 255.625 L 329.488281 237.558594 L 360.378906 237.558594 L 360.308594 220.332031 L 267.628906 220.339844 L 267.683594 298.542969 Z M 588.664062 316.199219 L 249.980469 316.199219 L 249.953125 202.640625 L 297.621094 202.65625 L 297.664062 141.460938 L 497.332031 141.457031 L 497.335938 220.355469 L 588.675781 220.34375 Z M 588.664062 316.199219 "
+        />
+      </symbol>
+    </svg>
+
+    <!-- ===== TOPO ===== -->
+    <header data-fixo>
+      <div class="wrap">
+        <a class="brand" href="index.html"
+          ><svg viewBox="0 0 340 176" aria-hidden="true"><use href="#m" /></svg
+          >NUVE</a
+        >
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="index.html#servicos">Serviços</a>
+          <a href="projetos.html" aria-current="page">Projetos</a>
+          <a
+            class="nb"
+            href="https://wa.me/5579991488085?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Nuve%20Studios%20e%20quero%20falar%20sobre%20um%20projeto."
+            target="_blank"
+            rel="noopener"
+            >Contato</a
+          >
+        </nav>
+        <button
+          class="burger"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== TÍTULO E FILTROS ===== -->
+      <section class="proj-topo">
+        <div class="wrap">
+          <h1>Projetos</h1>
+          <p class="lead">
+            Posts, pós-produção e direção de arte feitos pela Nuve.
+          </p>
+          <div
+            class="filtros"
+            id="filtros"
+            role="group"
+            aria-label="Filtrar projetos"
+          ></div>
+        </div>
+      </section>
+
+      <!-- ===== LISTA DE PROJETOS (vem de js/projetos-dados.js) ===== -->
+      <section class="proj-lista">
+        <div class="wrap">
+          <div class="proj-grade" id="grade"></div>
+
+          <!-- Aparece enquanto não houver nenhum projeto cadastrado -->
+          <div class="proj-vazio" id="vazio">
+            <!-- A nuvem 3D entra aqui (js/nuvem-3d.js). O desenho 2D é o plano B. -->
+            <div class="vazio-nuvem" id="nuvem-vazio" aria-hidden="true">
+              <svg class="nuvem-2d" viewBox="0 0 340 176">
+                <use href="#m" />
+              </svg>
+            </div>
+            <h2>Em breve</h2>
+            <p>
+              A Nuve está começando agora. Os primeiros projetos entram aqui
+              assim que forem entregues.
+            </p>
+            <a
+              class="btn p"
+              href="https://wa.me/5579991488085?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Nuve%20Studios%20e%20quero%20falar%20sobre%20um%20projeto."
+              target="_blank"
+              rel="noopener"
+              >Quero ser um dos primeiros</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== JANELA DE DETALHES (abre ao clicar num projeto) ===== -->
+      <dialog id="detalhe" aria-labelledby="det-nome">
+        <button class="fechar" type="button" aria-label="Fechar">×</button>
+        <img class="det-img" id="det-img" alt="" />
+        <div class="det-info">
+          <p class="det-cat" id="det-cat"></p>
+          <h2 id="det-nome"></h2>
+          <p class="det-desc" id="det-desc"></p>
+        </div>
+      </dialog>
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer>
+      <div class="wrap">
+        <div class="fg">
+          <div class="fb">
+            <a class="brand" href="index.html"
+              ><svg viewBox="0 0 340 176" aria-hidden="true">
+                <use href="#m" /></svg
+              >NUVE STUDIOS</a
+            >
+            <p>
+              Estúdio visual em Aracaju: posts, pós-produção e direção de arte.
+            </p>
+            <a
+              class="btn p"
+              href="https://wa.me/5579991488085?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Nuve%20Studios%20e%20quero%20falar%20sobre%20um%20projeto."
+              target="_blank"
+              rel="noopener"
+              >Falar com a Nuve</a
+            >
+          </div>
+          <div>
+            <h4>Navegação</h4>
+            <a href="index.html#servicos">Serviços</a
+            ><a href="projetos.html">Projetos</a
+            ><a href="index.html#processo">Processo</a
+            ><a href="index.html#faq">Dúvidas</a>
+          </div>
+          <div>
+            <h4>O que fazemos</h4>
+            <span>Posts</span><span>Pós-produção</span
+            ><span>Direção de arte</span>
+          </div>
+          <div>
+            <h4>Contato</h4>
+            <a
+              href="https://wa.me/5579991488085?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Nuve%20Studios%20e%20quero%20falar%20sobre%20um%20projeto."
+              target="_blank"
+              rel="noopener"
+              >WhatsApp (79) 99148-8085</a
+            >
+            <a
+              href="https://www.instagram.com/nuve.studios/"
+              target="_blank"
+              rel="noopener"
+              >Instagram @nuve.studios</a
+            >
+          </div>
+        </div>
+        <div class="fbar">
+          <span>© 2026 Nuve Studios. Todos os direitos reservados.</span
+          ><a href="#">Voltar ao topo</a>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="zap"
+      href="https://wa.me/5579991488085?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Nuve%20Studios%20e%20quero%20falar%20sobre%20um%20projeto."
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+      ><svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 5h16v11H9l-5 4z" /></svg
+      >WhatsApp</a
+    >
+
+    <script src="js/menu.js"></script>
+    <script src="js/projetos-dados.js"></script>
+    <script src="js/projetos.js"></script>
+    <script src="js/carregar-3d.js"></script>
+  </body>
+</html>

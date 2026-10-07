@@ -1,0 +1,45 @@
+/* =====================================================
+   DÚVIDAS FREQUENTES
+   Perguntas que abrem e fecham.
+   ===================================================== */
+.faq {
+  max-width: 760px;
+  margin-top: 44px;
+}
+details {
+  border-bottom: 1px solid var(--linha);
+  padding: 20px 0;
+}
+summary {
+  cursor: pointer;
+  font: 500 1.05rem var(--fonte-titulo);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--marinho);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) summary::after {
+    color: var(--azul-claro);
+  }
+}
+:root[data-theme="dark"] summary::after {
+  color: var(--azul-claro);
+}
+details[open] summary::after {
+  content: "–";
+}
+details p {
+  color: var(--texto-suave);
+  margin: 12px 0 0;
+  max-width: 40em;
+}

@@ -1,0 +1,88 @@
+/* DADOS DE EXEMPLO (fictícios), só para visualizar a página de projetos.
+   Não vão para o site de verdade: a lista real é js/projetos-dados.js */
+window.NUVE_PROJETOS = [
+  {
+    nome: "Café do Cais",
+    categoria: "posts",
+    imagem: "imagens/ex-1.svg",
+    descricao: "Campanha de lançamento: série de posts e capas de destaque.",
+    ano: "2026",
+  },
+  {
+    nome: "Academia Nível",
+    categoria: "posts",
+    imagem: "imagens/ex-2.svg",
+    descricao: "Linha visual de posts para as redes, com blocos em degrau.",
+    ano: "2026",
+  },
+  {
+    nome: "Ensaio Maré",
+    categoria: "pos-producao",
+    imagem: "imagens/ex-3.svg",
+    descricao: "Tratamento de cor e retoque em fotos de ensaio.",
+    ano: "2026",
+  },
+  {
+    nome: "Brisa Cervejaria",
+    categoria: "direcao-de-arte",
+    imagem: "imagens/ex-4.svg",
+    descricao: "Direção de arte: paleta, tipografia e linguagem visual.",
+    ano: "2026",
+  },
+  {
+    nome: "Carrossel de identidade",
+    categoria: "posts",
+    imagem: "imagens/ex-5.svg",
+    descricao: "Carrossel educativo para o perfil de um cliente.",
+    ano: "2026",
+  },
+  {
+    nome: "Retrato Aurora",
+    categoria: "pos-producao",
+    imagem: "imagens/ex-6.svg",
+    descricao: "Edição de retrato com acabamento de campanha.",
+    ano: "2026",
+  },
+  {
+    nome: "Moodboard Sertão Vivo",
+    categoria: "direcao-de-arte",
+    imagem: "imagens/ex-7.svg",
+    descricao: "Moodboard e referências para uma coleção de moda.",
+    ano: "2026",
+  },
+  {
+    nome: "Manifesto Nuve",
+    categoria: "posts",
+    imagem: "imagens/ex-8.svg",
+    descricao: "Post de posicionamento da marca.",
+    ano: "2026",
+  },
+  {
+    nome: "Cartela Verão",
+    categoria: "pos-producao",
+    imagem: "imagens/ex-9.svg",
+    descricao: "Correção de cor e padronização de uma série de fotos.",
+    ano: "2026",
+  },
+  {
+    nome: "Studio Lume",
+    categoria: "direcao-de-arte",
+    imagem: "imagens/ex-10.svg",
+    descricao: "Exploração de logotipo e escolha do caminho visual.",
+    ano: "2026",
+  },
+  {
+    nome: "Frase da semana",
+    categoria: "posts",
+    imagem: "imagens/ex-11.svg",
+    descricao: "Série de posts de frases com a identidade do cliente.",
+    ano: "2026",
+  },
+  {
+    nome: "Teaser de lançamento",
+    categoria: "posts",
+    imagem: "imagens/ex-12.svg",
+    descricao: "Arte de teaser para anunciar uma novidade.",
+    ano: "2026",
+  },
+];

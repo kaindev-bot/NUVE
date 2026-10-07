@@ -1,0 +1,88 @@
+/* =====================================================
+   CORES E FONTES
+   Para testar uma nova paleta, mude só os valores deste arquivo.
+   ===================================================== */
+
+:root {
+  /* ---- Cores da marca (tiradas do logo) ---- */
+  --marinho: #1f4677; /* azul-marinho do logo */
+  --azul-claro: #a1d7f4; /* azul-claro do logo: botões, linhas, detalhes */
+  --branco: #ffffff;
+  --azul-profundo: #15304f; /* texto escuro e texto do botão principal */
+  --azul-noite: #0d2037; /* fundo do topo, do menu e do chamado final */
+
+  /* ---- Brilhos e detalhes sobre fundo escuro ---- */
+  --brilho: #2c5d96; /* luz de fundo (topo e chamado final) */
+  --brilho-2: #2a5688; /* segunda luz de fundo do topo */
+  --brilho-nuvem: rgba(
+    161,
+    215,
+    244,
+    0.45
+  ); /* brilho embaixo da nuvem do topo */
+  --grade: rgba(161, 215, 244, 0.22); /* linhas do piso do topo */
+  --hover-claro: rgba(
+    161,
+    215,
+    244,
+    0.14
+  ); /* fundo do botão de contorno ao passar o mouse */
+  --sombra-texto: rgba(13, 32, 55, 0.7); /* sombra do título do chamado final */
+  --sombra-botao: rgba(
+    13,
+    32,
+    55,
+    0.45
+  ); /* sombra do botão flutuante do WhatsApp */
+  --fundo-modal: rgba(
+    13,
+    32,
+    55,
+    0.85
+  ); /* fundo escuro atrás da janela de detalhes */
+  --texto-sobre-escuro: #cfe6f5; /* textos claros sobre fundo escuro */
+  --destaque-texto: #d3e8f6; /* texto do card em destaque */
+
+  /* ---- Nuvem 3D (topo e chamado final) ---- */
+  --nuvem-frente: #a1d7f4; /* face da frente */
+  --nuvem-lateral: #3f86bb; /* laterais (espessura) */
+
+  /* ---- Rodapé e menu ---- */
+  --rodape-fundo: #091a2e;
+  --rodape-texto: #a9c8de;
+  --rodape-linha: #1d3b5c;
+  --topo-fundo: #0d2037; /* fundo do topo fixo depois que a página rola */
+  --menu-linha: #23466e; /* linhas do menu no celular */
+
+  /* ---- Tema claro (padrão) ---- */
+  --fundo: #ffffff;
+  --fundo-2: #eef7fd; /* fundo da seção "processo" */
+  --cartao: #eef7fd; /* fundo dos cards de serviços */
+  --texto: #15304f;
+  --texto-suave: #476582;
+  --linha: #c9e3f3;
+
+  /* ---- Fontes (Google Fonts, carregadas no index.html) ---- */
+  --fonte-titulo: "Unbounded", "Arial Black", Impact, sans-serif;
+  --fonte-texto: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ---- Tema escuro (aplicado quando o aparelho está em modo escuro) ---- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fundo: #0f2640;
+    --fundo-2: #112b49;
+    --cartao: #173a60;
+    --texto: #eaf5fc;
+    --texto-suave: #a3c0d8;
+    --linha: #2c5584;
+  }
+}
+:root[data-theme="dark"] {
+  --fundo: #0f2640;
+  --fundo-2: #112b49;
+  --cartao: #173a60;
+  --texto: #eaf5fc;
+  --texto-suave: #a3c0d8;
+  --linha: #2c5584;
+}

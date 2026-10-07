@@ -1,0 +1,44 @@
+/* =====================================================
+   CHAMADO FINAL
+   "Vamos tirar seu projeto do papel?" com a nuvem 3D atrás.
+   ===================================================== */
+.cta {
+  background:
+    radial-gradient(50% 80% at 50% 120%, var(--brilho), transparent),
+    var(--azul-noite);
+  color: var(--branco);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0;
+}
+.cta .cloud {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.cta .wrap {
+  position: relative;
+  z-index: 1;
+}
+.cta h2 {
+  text-shadow: 0 4px 30px var(--sombra-texto);
+}
+.cta h2 {
+  margin: 0 auto;
+}
+.cta p {
+  color: var(--texto-sobre-escuro);
+  margin: 18px auto 34px;
+  max-width: 30em;
+}
+@media (max-width: 860px) {
+  .cta {
+    padding: 110px 0;
+  }
+}
+
+.cta .btns {
+  justify-content: center; /* centraliza os dois botões */
+}

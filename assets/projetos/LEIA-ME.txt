@@ -1,0 +1,3 @@
+Coloque aqui as imagens dos projetos (jpg, png ou webp).
+Tamanho ideal: 1080 x 1350 px (formato de post 4:5) e menos de 500 KB cada.
+Depois cadastre o projeto em js/projetos-dados.js.

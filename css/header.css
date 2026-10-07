@@ -1,0 +1,159 @@
+/* =====================================================
+   TOPO (CABEÇALHO) E MENU
+   Logo, links, botão Contato e menu hambúrguer do celular.
+   ===================================================== */
+/* Topo fixo: transparente sobre o hero e com fundo sólido depois que a página rola */
+:root {
+  --altura-topo: 72px; /* usada para os links não ficarem escondidos atrás do topo */
+}
+header {
+  position: fixed;
+  inset: 0 0 auto;
+  padding: 22px 0;
+  z-index: 5;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    background 0.25s,
+    padding 0.25s,
+    border-color 0.25s;
+}
+header.rolou {
+  background: var(--topo-fundo);
+  border-bottom-color: var(--menu-linha);
+  padding: 12px 0;
+}
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font: 800 1.05rem var(--fonte-titulo);
+  color: var(--branco);
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.brand svg {
+  width: 36px;
+  height: 19px;
+  color: var(--azul-claro);
+}
+.brand {
+  position: relative;
+  z-index: 2;
+}
+.burger {
+  display: none;
+  position: relative;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--branco);
+}
+.burger span {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: currentColor;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+.burger span:nth-child(1) {
+  top: 15px;
+}
+.burger span:nth-child(2) {
+  top: 21px;
+}
+.burger span:nth-child(3) {
+  top: 27px;
+}
+header.open .burger span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+header.open .burger span:nth-child(2) {
+  opacity: 0;
+}
+header.open .burger span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 26px;
+  opacity: 0.85;
+}
+nav a:hover {
+  opacity: 1;
+}
+nav .nb {
+  border: 2px solid var(--azul-claro);
+  padding: 9px 18px;
+  border-radius: 10px;
+  opacity: 1;
+}
+@media (max-width: 860px) {
+  .burger {
+    display: block;
+  }
+  nav {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: var(--azul-noite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(90px + env(safe-area-inset-top, 0px)) 32px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.2s,
+      visibility 0.2s;
+  }
+  header.open nav {
+    opacity: 1;
+    visibility: visible;
+  }
+  nav a {
+    display: block;
+    margin: 0;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--menu-linha);
+    font: 800 1.7rem var(--fonte-titulo);
+    opacity: 1;
+  }
+  nav .nb {
+    border: 2px solid var(--azul-claro);
+    border-radius: 2px;
+    text-align: center;
+    font: 600 1.05rem var(--fonte-texto);
+    margin-top: 26px;
+    padding: 14px;
+  }
+}
+
+/* Página atual no menu */
+nav a[aria-current="page"] {
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-color: var(--azul-claro);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+/* Páginas sem hero (ex.: projetos): o topo já começa com fundo */
+header[data-fixo] {
+  background: var(--topo-fundo);
+  border-bottom-color: var(--menu-linha);
+  padding: 12px 0;
+}

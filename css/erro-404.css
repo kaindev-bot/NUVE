@@ -1,0 +1,126 @@
+/* =====================================================
+   PÁGINA 404 (endereço que não existe)
+   Aparece sozinha na Vercel/Netlify quando o link está errado.
+   A nuvem 3D no lugar do zero vem de js/nuvem-3d.js.
+   ===================================================== */
+.erro {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 90px 24px 70px;
+  color: var(--branco);
+  background:
+    radial-gradient(55% 60% at 50% 38%, var(--brilho), transparent 70%),
+    radial-gradient(40% 50% at 8% 95%, var(--brilho-2), transparent 70%),
+    var(--azul-noite);
+}
+/* piso em grade, igual ao do topo do site */
+.piso {
+  position: absolute;
+  left: -30%;
+  right: -30%;
+  bottom: -18%;
+  height: 50%;
+  transform: perspective(420px) rotateX(64deg);
+  background:
+    repeating-linear-gradient(90deg, var(--grade) 0 2px, transparent 2px 70px),
+    repeating-linear-gradient(0deg, var(--grade) 0 2px, transparent 2px 70px);
+  -webkit-mask-image: linear-gradient(to top, #000, transparent 85%);
+  mask-image: linear-gradient(to top, #000, transparent 85%);
+}
+.erro > * {
+  position: relative;
+}
+.erro > .piso {
+  position: absolute; /* o piso não entra no fluxo da página */
+}
+.marca {
+  position: absolute !important;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--branco);
+  text-decoration: none;
+  font: 800 1.05rem var(--fonte-titulo);
+}
+.marca svg {
+  width: 36px;
+  height: 19px;
+  color: var(--azul-claro);
+}
+.erro-etiqueta {
+  margin: 0 0 6px;
+  font: 600 0.95rem var(--fonte-texto);
+  letter-spacing: 0.08em;
+  color: var(--azul-claro);
+}
+/* os dois "4" com espessura, combinando com a nuvem 3D */
+.erro-num {
+  display: flex;
+  align-items: center;
+  gap: 0.12em;
+  margin: 0 0 26px;
+  font: 800 clamp(4.5rem, 21vw, 12rem) / 1 var(--fonte-titulo);
+  color: var(--nuvem-frente);
+}
+.erro-num span {
+  text-shadow:
+    1px 1px 0 var(--nuvem-lateral),
+    2px 2px 0 var(--nuvem-lateral),
+    3px 3px 0 var(--nuvem-lateral),
+    4px 4px 0 var(--nuvem-lateral),
+    5px 5px 0 var(--nuvem-lateral),
+    6px 6px 0 var(--nuvem-lateral),
+    7px 7px 0 var(--nuvem-lateral),
+    8px 8px 0 var(--nuvem-lateral),
+    9px 9px 0 var(--nuvem-lateral),
+    10px 10px 0 var(--nuvem-lateral),
+    18px 24px 36px var(--sombra-texto);
+}
+.zero3d {
+  position: relative;
+  height: 0.6em;
+  aspect-ratio: 340 / 176;
+}
+.zero3d::after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: -34%;
+  height: 24%;
+  background: radial-gradient(closest-side, var(--brilho-nuvem), transparent);
+  filter: blur(8px);
+}
+.zero-svg {
+  width: 100%;
+  height: 100%;
+  color: var(--azul-claro);
+}
+.erro h1 {
+  font-size: clamp(1.4rem, 3.6vw, 2rem);
+  margin: 0 0 14px;
+}
+.erro-texto {
+  max-width: 30em;
+  margin: 0 0 32px;
+  color: var(--texto-sobre-escuro);
+}
+.erro-botoes {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.erro-rodape {
+  margin: 44px 0 0;
+  font-size: 0.9rem;
+  color: var(--rodape-texto);
+}

@@ -1,0 +1,3 @@
+Exemplo para visualizar a página de projetos com trabalhos fictícios.
+Abra projetos-exemplo.html no navegador. Nada desta pasta vai para o site de verdade.
+Pode apagar a pasta "exemplo" antes de publicar.
